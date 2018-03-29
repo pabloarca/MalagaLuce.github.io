@@ -172,24 +172,11 @@ else {
     }, 'waterway-label');
 
  /* Popup*/
-  map.on('click', function(e) {
-  var features = map.queryRenderedFeatures(e.point, {
-    layers: ['data.geojson'] // replace this with the name of the layer
-  });
-
-  if (!features.length) {
-    return;
-  }
-
-  var feature = features[0];
-
-    
-  var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.finishedDate + '</h3><p>' + feature.properties.user + '</p>')
-    .setLngLat(feature.geometry.coordinates)
-    .addTo(map);
-});
+ map.on('click', 'action-points', e => {
+      let properties = e['features'][0]['properties'],
+          geometry = e['features'][0]['geometry']
+          html = `<h3>${ properties['name'] ? properties['name'] : properties['use']}</h3>
+               ${properties['id'] ? '<span><meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
     
     /*
     Change the cursor to a pointer when the it hovers the location layer
