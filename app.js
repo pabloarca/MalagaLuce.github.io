@@ -171,7 +171,7 @@ else {
         }
     }, 'waterway-label');
 
-   map.on('click', function(e) {
+  map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
     layers: ['data'] // replace this with the name of the layer
   });
@@ -188,21 +188,6 @@ else {
     .setLngLat(feature.geometry.coordinates)
     .addTo(map);
 });
-    
-    
-      map.flyTo({
-        center: geometry['coordinates'],
-        speed: 0.4,
-        zoom: 18,
-        curve: 1
-      });
-
-      new mapboxgl.Popup()
-      .setLngLat(geometry['coordinates'])
-      .setHTML(html)
-      .addTo(map);
-    });
-
     /*
     Change the cursor to a pointer when the it hovers the location layer
     */
@@ -218,3 +203,4 @@ else {
     });
   });
 };
+
