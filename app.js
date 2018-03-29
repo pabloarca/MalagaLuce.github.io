@@ -171,12 +171,25 @@ else {
         }
     }, 'waterway-label');
 
-    map.on('click', 'action-points', e => {
-      let properties = e['features'][0]['properties'],
-          geometry = e['features'][0]['geometry']
-          html = `<h3>${ properties['user'] ? properties['name'] : properties['user']}</h3>
-               ${properties["finishedDate"] ? '<span>Realizado hace<meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
+   map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['data'] // replace this with the name of the layer
+  });
 
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .setLngLat(feature.geometry.coordinates)
+    .addTo(map);
+});
+    
+    
       map.flyTo({
         center: geometry['coordinates'],
         speed: 0.4,
