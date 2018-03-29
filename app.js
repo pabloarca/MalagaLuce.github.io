@@ -171,13 +171,25 @@ else {
         }
     }, 'waterway-label');
 
- /* Popup*/
- map.on('click', 'action-points', e => {
+    map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          html = `<h3>${ properties['name'] ? properties['name'] : properties['use']}</h3>
-               ${properties['id'] ? '<span><meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
-    
+          html = `<h3>${ properties['user'] ? properties['name'] : properties['user']}</h3>
+               ${properties['id'] ? '<span>si<meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
+
+      map.flyTo({
+        center: geometry['coordinates'],
+        speed: 0.4,
+        zoom: 18,
+        curve: 1
+      });
+
+      new mapboxgl.Popup()
+      .setLngLat(geometry['coordinates'])
+      .setHTML(html)
+      .addTo(map);
+    });
+
     /*
     Change the cursor to a pointer when the it hovers the location layer
     */
