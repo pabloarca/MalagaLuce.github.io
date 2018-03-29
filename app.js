@@ -172,8 +172,8 @@ else {
     }, 'waterway-label');
 
     map.on('click', 'action-points', e => {
-      let properties = e['features'][0]['properties'],
-          geometry = e['features'][0]['geometry']
+      let properties = e['features'][0]['properties']
+          
           html = `features.properties.finishedDate`;
 
       map.flyTo({
