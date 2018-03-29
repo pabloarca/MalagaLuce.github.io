@@ -173,8 +173,8 @@ else {
 
     map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
-          geometry = e['features'][0]['geometry'];
-          
+          geometry = e['features'][0]['geometry'],
+           html = `<h3>${ properties['finishedDate'] ? properties['user'] : properties['teams']}</h3>`;
  
       map.flyTo({
         center: geometry['coordinates'],
@@ -185,7 +185,7 @@ else {
 
       new mapboxgl.Popup()
       .setLngLat(geometry['coordinates'])
-      .setHTML(`feature.properties.finishedDate`)
+      .setHTML(html)
       .addTo(map);
     });
 
