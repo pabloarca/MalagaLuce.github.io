@@ -175,7 +175,7 @@ else {
       let properties = e['features'][0]['properties'];
           
           
-
+ 
       map.flyTo({
         center: geometry['coordinates'],
         speed: 0.4,
