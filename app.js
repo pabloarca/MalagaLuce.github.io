@@ -171,9 +171,10 @@ else {
         }
     }, 'waterway-label');
 
+ /* Popup*/
   map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['data'] // replace this with the name of the layer
+    layers: ['data.geojson'] // replace this with the name of the layer
   });
 
   if (!features.length) {
@@ -182,13 +183,14 @@ else {
 
   var feature = features[0];
 
-    /* Popup*/
+    
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
     .setHTML('<h3>' + feature.properties.finishedDate + '</h3><p>' + feature.properties.user + '</p>')
     .setLngLat(feature.geometry.coordinates)
     .addTo(map);
 });
+    
     /*
     Change the cursor to a pointer when the it hovers the location layer
     */
