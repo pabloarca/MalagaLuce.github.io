@@ -182,9 +182,10 @@ else {
 
   var feature = features[0];
 
+    /* Popup*/
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .setHTML('<h3>' + feature.properties.finishedDate + '</h3><p>' + feature.properties.user + '</p>')
     .setLngLat(feature.geometry.coordinates)
     .addTo(map);
 });
