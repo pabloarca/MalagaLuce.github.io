@@ -185,7 +185,7 @@ else {
 
       new mapboxgl.Popup()
       .setLngLat(geometry['coordinates'])
-      .setHTML(html)
+      .setHTML('<h3>' + feature.properties.finishedDate + '</h3>`)
       .addTo(map);
     });
 
