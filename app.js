@@ -171,25 +171,26 @@ else {
         }
     }, 'waterway-label');
 
-   map.on('click', function (e) {
-    // Use featuresAt to get features within a given radius of the click event
-    // Use layer option to avoid getting results from other layers
-    map.featuresAt(e.point, {layer: 'data', radius: 10, includeGeometry: true}, function (err, features) {
-        if (err) throw err;
-        // if there are features within the given radius of the click event,
-        // fly to the location of the click event
-        if (features.length) {
-            // Get coordinates from the symbol and center the map on those coordinates
-            map.flyTo({center: features[0].geometry.coordinates});
-            var featureName = features[0].properties.name;
-            var tooltip = new mapboxgl.Popup()
-                .setLngLat(e.lngLat)
-                .setHTML('<p>' + featureName + '</p>')
-                .addTo(map);
-        }
-    });
-});
+ 
+     map.on('click', 'action-points', e => {
+      let properties = e['features'][0]['properties'],
+          geometry = e['features'][0]['geometry']
+          var featureName = features[0].properties.id;
 
+      map.flyTo({
+        center: geometry['coordinates'],
+        speed: 0.4,
+        zoom: 18,
+        curve: 1
+      });
+
+      new mapboxgl.Popup()
+      .setLngLat(geometry['coordinates'])
+      .setHTML('<p>' + featureName + '</p>')
+      .addTo(map);
+    });
+    
+    
     /*
     Change the cursor to a pointer when the it hovers the location layer
     */
