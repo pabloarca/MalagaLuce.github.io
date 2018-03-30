@@ -174,7 +174,7 @@ else {
    
    map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['data'] // replace this with the name of the layer
+    layers: ['data.geojson'] // replace this with the name of the layer
   });
 
   if (!features.length) {
