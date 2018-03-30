@@ -176,7 +176,7 @@ else {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
           html = `<h3><span>Fecha de finalización: </span> ${properties['creationDate'] ? properties['creationDate'] : 'no'}</h3>
-                  <h3><span>Usuarios implicados: </span> ${properties['volunteers'] ? properties['name'] : 'no'}</h3>`;
+                  <h3><span>Usuarios implicados: </span> ${properties['volunteers'] ? volunteers['name'] : 'no'}</h3>`;
 
 
 
