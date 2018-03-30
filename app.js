@@ -178,7 +178,18 @@ map.on('click', 'action-points', e => {
           html = `<h3>${ properties['creationDate'] ? properties['name'] : properties['points']}</h3>
                ${properties['creationDate'] ? '<span>Ocupación del parking <meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
     
-    
+  map.flyTo({
+        center: geometry['coordinates'],
+        speed: 0.4,
+        zoom: 18,
+        curve: 1
+      });
+
+      new mapboxgl.Popup()
+      .setLngLat(geometry['coordinates'])
+      .setHTML(html)
+      .addTo(map);
+    }); 
 
     /*
     Change the cursor to a pointer when the it hovers the location layer
