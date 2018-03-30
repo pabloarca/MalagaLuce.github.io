@@ -175,7 +175,8 @@ else {
      map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          html = `<h3><span>realizado en fecha: </span> ${properties['creationDate'] ? properties['creationDate'] : 'no'}</h3>`;
+          html = `<h3><span>Fecha de finalización: </span> ${properties['creationDate'] ? properties['creationDate'] : 'no'}</h3>
+                  <h3><span>Usuarios implicados: </span> ${properties['Volunteers'] ? properties['name'] : 'no'}</h3>`;
 
 
 
