@@ -175,7 +175,7 @@ else {
      map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          featureName = features[0].properties.id;
+          
 
       map.flyTo({
         center: geometry['coordinates'],
@@ -186,7 +186,7 @@ else {
 
       new mapboxgl.Popup()
       .setLngLat(geometry['coordinates'])
-      .setHTML('<p>' + featureName + '</p>')
+      .setHTML('<p>' + properties + '</p>')
       .addTo(map);
     });
     
