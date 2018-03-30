@@ -175,7 +175,7 @@ else {
      map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          html = `${properties['creationDate'] ? '<span>si<$properties['creationDate']></meter></span>' : 'no'}`;
+          html = `${properties['creationDate'] ? properties['creationDate'] : 'no'}`;
 
 
 
