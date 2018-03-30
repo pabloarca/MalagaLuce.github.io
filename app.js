@@ -186,7 +186,7 @@ else {
 
       new mapboxgl.Popup()
       .setLngLat(geometry['coordinates'])
-      .setHTML('<p>' + properties + '</p>')
+      .setHTML(properties)
       .addTo(map);
     });
     
