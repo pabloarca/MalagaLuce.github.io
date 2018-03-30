@@ -174,7 +174,7 @@ else {
     map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          html = `'<span>si<meter low="50" high="75" max="100" value="80"></meter></span>' : 'yes'}`;
+          html = `si`;
 
       map.flyTo({
         center: geometry['coordinates'],
