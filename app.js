@@ -175,7 +175,7 @@ else {
      map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          html = `<h3>${properties['creationDate'] ? properties['creationDate'] : 'no'}</h3>`;
+          html = `<h3><span>realizado en fecha: </span> ${properties['creationDate'] ? properties['creationDate'] : 'no'}</h3>`;
 
 
 
