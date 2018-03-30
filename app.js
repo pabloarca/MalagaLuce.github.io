@@ -172,23 +172,23 @@ else {
     }, 'waterway-label');
 
    
-    map.on('click', 'action-points', e => {
-      let properties = e['features'][0]['properties'],
-          geometry = e['features'][0]['geometry'],
-           html = e['features'][0]['properties'][0]['creationDate'];
- 
-      map.flyTo({
-        center: geometry['coordinates'],
-        speed: 0.4,
-        zoom: 18,
-        curve: 1
-      });
+   map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['data'] // replace this with the name of the layer
+  });
 
-      new mapboxgl.Popup()
-      .setLngLat(geometry['coordinates'])
-      .setHTML(html)
-      .addTo(map);
-    });
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.points + '</h3><p>' + feature.properties.name + '</p>')
+    .setLngLat(feature.geometry.coordinates)
+    .addTo(map);
+});
     
     
 
