@@ -12,7 +12,7 @@ else {
             [-4.3526458740234375,
             36.75043865214185]
         ]
-        url = "data.geojson",
+        url = "./data.geojson",
         map = new mapboxgl.Map({
           container: 'map', // container id
           style: 'mapbox://styles/mapbox/streets-v10', // stylesheet location
