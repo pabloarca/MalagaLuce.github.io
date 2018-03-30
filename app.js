@@ -171,14 +171,13 @@ else {
         }
     }, 'waterway-label');
 
-   
-map.on('click', 'action-points', e => {
+    map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
-          html = `<h3>${ properties['creationDate'] ? properties['name'] : properties['points']}</h3>
-               ${properties['creationDate'] ? '<span>Ocupación del parking <meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
-    
-  map.flyTo({
+          html = `<h3>${ properties['id'] ? properties['name'] : properties['points']}</h3>
+               ${properties['creationDate'] ? '<span>si<meter low="50" high="75" max="100" value="80"></meter></span>' : ''}`;
+
+      map.flyTo({
         center: geometry['coordinates'],
         speed: 0.4,
         zoom: 18,
@@ -189,7 +188,7 @@ map.on('click', 'action-points', e => {
       .setLngLat(geometry['coordinates'])
       .setHTML(html)
       .addTo(map);
-    }); 
+    });
 
     /*
     Change the cursor to a pointer when the it hovers the location layer
@@ -206,4 +205,3 @@ map.on('click', 'action-points', e => {
     });
   });
 };
-
