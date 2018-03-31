@@ -216,7 +216,7 @@ else {
 
     map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
-          geometry = e['features'][0]['geometry'],
+          geometry = e['features'][0]['geometry']
           
           voluntarios = properties.forEach(function(name){
                                 });                                      
