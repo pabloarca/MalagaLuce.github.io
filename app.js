@@ -218,12 +218,14 @@ else {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']      
                                 
-          html = `<h3>Realizado en fecha: ${ properties['finishedDate'] ? properties['finishedDate'] : ''}</h3>            
-            <h4>Antes:${properties['id'] ? properties['creationPic'] : ''}</h4>
-            <h4>Después:${properties['id'] ? properties['finishedPic'] : ''}</h4>`;
+          html = ` <h3> ${ properties['id'] ? properties[''] : ''}</h3>
+            <h3>Realizado en fecha: ${ properties['id'] ? properties['finishedDate'] : ''}</h3>            
+            <img src="${properties['id'] ? properties['creationPic'] : ''}">`;
 
       
    
+      
+      
       map.flyTo({
         center: geometry['coordinates'],
         speed: 0.4,
