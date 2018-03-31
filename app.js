@@ -219,7 +219,7 @@ else {
           geometry = e['features'][0]['geometry'],
           voluntarios = e['features'][0]['volunteers']
           html = `<h3>Realizado en fecha: ${ properties['finishedDate'] ? properties['finishedDate'] : ''}</h3>
-               <h3> ${properties['id'] ? voluntarios : ''} <h3>`;
+               <h3> ${properties['id'] ? voluntarios['name'] : ''} <h3>`;
 
       map.flyTo({
         center: geometry['coordinates'],
