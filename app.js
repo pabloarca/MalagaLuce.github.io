@@ -217,9 +217,9 @@ else {
     map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry'],
-          volunt = e['features'][0]['volunteers']
+          volunteers = e['features'][0][properties][0]['volunteers']
           html = `<h3>Realizado en fecha: ${ properties['finishedDate'] ? properties['finishedDate'] : ''}</h3>
-               <h3> ${properties['id'] ? volunt[0] : ''} <h3>`;
+               <h3> ${properties['id'] ? volunteers['name'] : ''} <h3>`;
 
       map.flyTo({
         center: geometry['coordinates'],
