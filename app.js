@@ -218,7 +218,7 @@ else {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']      
                                 
-          html = `<h3 class="popupTitle">Realizado en fecha: ${ properties['id'] ? properties['finishedDate'] : ''}</h3>            
+          html = `<h3 class="popuptitle">Realizado en fecha: ${ properties['id'] ? properties['finishedDate'] : ''}</h3>            
                   <h2 >Antes: </h2><img src="${properties['id'] ? properties['creationPic'] : ''}">
                   <h2>Después: </h2><img src="${properties['id'] ? properties['finishedPic'] : ''}">`;
 
