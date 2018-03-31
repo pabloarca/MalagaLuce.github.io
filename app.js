@@ -220,7 +220,7 @@ else {
           
          
           html = `<h3>Realizado en fecha: ${ properties['finishedDate'] ? properties['finishedDate'] : ''}</h3>
-            ${properties['id'] ? volunteers[0] : ''}`;
+            ${properties['id'] ? properties['volunteers'] : ''}`;
 
       map.flyTo({
         center: geometry['coordinates'],
