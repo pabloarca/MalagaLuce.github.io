@@ -218,7 +218,7 @@ else {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']
           html = `<h3>${ properties['finishedDate'] ? properties['finishedDate'] : ''}</h3>
-               <h3>${volunteers.forEach(volunteer => {properties['id'] ? volunteers['name'] : ''})}<h3>`;
+               <h3> ${volunteers[0]} <h3>`;
 
       map.flyTo({
         center: geometry['coordinates'],
