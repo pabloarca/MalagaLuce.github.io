@@ -220,7 +220,8 @@ else {
                                 
           html = ` <h3> ${ properties['id'] ? properties[''] : ''}</h3>
             <h3>Realizado en fecha: ${ properties['id'] ? properties['finishedDate'] : ''}</h3>            
-            <img src="${properties['id'] ? properties['creationPic'] : ''}">`;
+            <img src="${properties['id'] ? properties['creationPic'] : ''}">
+             <img src="${properties['id'] ? properties['finishedPic'] : ''}">`;
 
       
    
