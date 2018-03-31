@@ -217,7 +217,7 @@ else {
     map.on('click', 'action-points', e => {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry'],
-          voluntarios = e['volunteers'][0]
+          voluntarios = e['features'][0]['volunteers']
           html = `<h3>Realizado en fecha: ${ properties['finishedDate'] ? properties['finishedDate'] : ''}</h3>
                <h3> ${properties['id'] ? voluntarios : ''} <h3>`;
 
