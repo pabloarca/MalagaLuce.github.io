@@ -218,7 +218,7 @@ else {
       let properties = e['features'][0]['properties'],
           geometry = e['features'][0]['geometry']      
                                 
-          html = `<h3 class="emblem"></h3>     
+          html = `<img class="emblem" src="">    
                   <h3 class="date">Realizado en fecha: ${ properties['id'] ? properties['finishedDate'] : ''}</h3>            
                    <img class="photo1" src="${properties['id'] ? properties['creationPic'] : ''}"/>
                    <img class="photo2" src="${properties['id'] ? properties['finishedPic'] : ''}"/>
