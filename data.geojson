@@ -5,9 +5,9 @@
       "type": "Feature",
       "properties": {    "id": "5aa98d995ae89d507bf2e0cb",
     "creationDate": "2018-03-03",
-    "creationPic": "escudo.png",
+    "creationPic": "photo1.jpg",
     "finishedDate": "2018-03-13",
-    "finishedPic": "img/escudo.png",
+    "finishedPic": "photo2.jpg",
     "verified": true,
     "volunteers": [
       {
