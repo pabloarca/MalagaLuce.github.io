@@ -222,7 +222,7 @@ else {
                   <h3 class="date">Realizado en fecha: ${ properties['id'] ? properties['finishedDate'] : ''}</h3>            
                    <img class="photo1" src="${properties['id'] ? properties['creationPic'] : ''}"/>
                    <img class="photo2" src="${properties['id'] ? properties['finishedPic'] : ''}"/>
-                   <h3 class="desc">texto aquí</h3>`;
+                   `;
 
       
    
