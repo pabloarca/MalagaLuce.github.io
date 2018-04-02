@@ -75,6 +75,10 @@ body { margin:0; padding:0; }
   margin-bottom: 5px;
 }
 
+.mapboxgl-popup-content {
+        border-radius: 10px; 
+        background-color: #daedea;        
+        }
 
 .popup__list {
   list-style: none;
@@ -82,7 +86,7 @@ body { margin:0; padding:0; }
   max-width: 256px;
   max-height: 128px;
   overflow: auto;
-  background-color: #daedea;
+  
 }
 
 .popup__list-element {
