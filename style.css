@@ -101,4 +101,5 @@ body { margin:0; padding:0; }
 .popup__images {
   display: flex;
   align-items: baseline;
+  border-radius: 10px;  
 }
