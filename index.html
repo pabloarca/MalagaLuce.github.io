@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.css" type="text/css" />
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="style.min.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div class="container" onclick="changeMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+   </div>
+   <div id="overlay" class="overlay">
+     <div class="time-overlay">
+       <h3>Rango temporal</h3>
+       <input id="time-slider" class="time-slider" type="range" min="0" max="0" step="1" value="0" />
+       <label id="time-label">Todas las acciones</label>
+     </div>
+     <nav class="menu">
+       <ul id="filter-group" class="filter-group">
+       </ul>
+     </nav>
+   </div>
+        <script src="app.min.js"></script>
+  </body>
+</html>
