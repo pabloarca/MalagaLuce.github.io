@@ -112,27 +112,6 @@ body{
     align-items:baseline
 }
 
-.popupCloseButton {
-    background-color: #fff;
-    border: 3px solid #999;
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: arial;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 25px;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-.popupCloseButton:hover {
-    background-color: #ccc;
-}
-
 .container{
     display:inline-block;
     cursor:pointer;
@@ -169,4 +148,10 @@ body{
     -webkit-transform:rotate(45deg) translate(-8px,-8px);
     transform:rotate(45deg) translate(-8px,-8px)
 }
+
+h3 { 
+    font-weight: bold;
+    color:#e55e5e
+}
+
  
