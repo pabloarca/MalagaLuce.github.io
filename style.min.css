@@ -151,7 +151,9 @@ body{
 }
 
 .figcaption {
-    
+    display: block;
+    font-weight: 700;
+    padding: 5px;
     text-align: center !important
 }
 
