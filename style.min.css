@@ -150,9 +150,9 @@ body{
     transform:rotate(45deg) translate(-8px,-8px)
 }
 
-.figure {
+.figcaption {
     
-    text-align: center
+    text-align: center !important
 }
 
 
